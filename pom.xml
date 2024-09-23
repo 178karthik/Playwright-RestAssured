@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>KarthikPlaywrightRestassured</groupId>
+    <artifactId>KarthikPlaywrightRestassured</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>Automation Tests</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+<!--        <maven.test.skip>true</maven.test.skip>-->
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.11.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.java-json-tools/json-schema-validator -->
+        <dependency>
+            <groupId>com.github.java-json-tools</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>2.2.14</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.13.0</version> <!-- Replace with the latest version -->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-csv</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vmware.jsonteng</groupId>
+            <artifactId>jsonteng</artifactId>
+            <version>1.0.7</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.24.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.20.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.21.M1</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.beanshell/bsh -->
+        <dependency>
+            <groupId>org.beanshell</groupId>
+            <artifactId>bsh</artifactId>
+            <version>2.0b5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.microsoft.playwright/playwright -->
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.46.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/exec-maven-plugin -->
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                    </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>repo-test.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+<!--                    <forkCount>0</forkCount>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+<!--        SMS Profiles -->
+        <profile>
+            <id>SMS-webhook-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>main-suite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+<!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-self-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>repo-test.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+<!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-smoke</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/api/smoke.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+<!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-suite-wise</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/group-wise-tests.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-ui-regression</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>ui.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-homepage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/suites/homepage.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-endorsements</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/endorsements.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-my-skills</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/suites/myskills.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-my-role-summary</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/myrolesummarypage.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-my-specialization</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/myspecializationspage.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-my-courses</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/mycourses.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-teamDetails</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/teamDetails.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-manageLearnings</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/manageLearnings.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-testDataDeletion</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/api/test-data-deletion.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-smokeuiapi</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/smoke.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>SMS-prerequisites</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/ui/prerequisitesInitialTests.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+<!--        RMS Profiles -->
+        <profile>
+            <id>RMS-authentication</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/rms/authentication.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>RMS-demand-form-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <configuration>
+                            <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21.M1/aspectjweaver-1.9.21.M1.jar"
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>runner/rms/demandform/demand-form-tests.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                            <!--                            <forkCount>0</forkCount>-->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

@@ -1,0 +1,8 @@
+{
+  "headless": true,
+  "slowMotion": 0,
+  "defaultTimeout": 60,
+  "browser": "chrome",
+  "heavyPagesLoadingTime": 180,
+  "enableVideosForFailureTests": true
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Automation Tests" >
+    <suite-files>
+        <suite-file path="/runner/ui/homepage.xml" />
+        <suite-file path="/runner/ui/pagesLoading.xml" />
+        <suite-file path="/runner/ui/saveSkills-SearchBar.xml" />
+        <suite-file path="/runner/ui/saveSkills-BrowseSkills.xml" />
+        <suite-file path="/runner/ui/saveSkills-updateSkills.xml" />
+        <suite-file path="/runner/ui/mySkills-VerifySkillCount.xml" />
+        <suite-file path="/runner/ui/mySkills-Validatations.xml" />
+        <suite-file path="/runner/ui/myrolesummarypage.xml" />
+        <suite-file path="/runner/ui/myspecializationspage.xml" />
+        <suite-file path="/runner/ui/endorsements.xml" />
+        <suite-file path="/runner/ui/mycourses.xml" />
+        <suite-file path="/runner/ui/teamDetails.xml" />
+    </suite-files>
+</suite>

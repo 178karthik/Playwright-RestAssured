@@ -1,0 +1,17 @@
+{
+  "description": "[Admin->Roles->Role] :: Search Designation Master",
+  "uriPath": "/prismapi/admin/getDesignations",
+  "headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "body": {
+  "search": "{name}",
+  "limit": 10,
+  "forAutoComplete": true,
+  "filters": [],
+  "clientId": "{clientId}",
+  "maxModifiedDt": ""
+},
+  "method": "POST"
+}
