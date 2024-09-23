@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="My Courses"  thread-count="3" parallel="tests">
+<suite name="Vendorportal"  thread-count="3" parallel="tests">
     <listeners>
         <listener class-name="com.karthik178.listeners.UITestListener"></listener>
     </listeners>
