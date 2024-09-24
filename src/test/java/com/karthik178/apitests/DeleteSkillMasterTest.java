@@ -2,7 +2,6 @@ package com.karthik178.apitests;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.karthik178.apimanager.enums.Literals;
 import com.karthik178.apimanager.payload.PayloadBuilder;
 import com.karthik178.apimanager.rest.APIExecutor;
 import com.karthik178.apimanager.rest.RestRequestDefinition;
