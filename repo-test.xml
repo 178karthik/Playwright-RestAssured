@@ -7,7 +7,6 @@
     </listeners>
     <test thread-count="5" name="Skill Group">
         <classes>
-            <class name="com.karthik178.apitests.selftests.LoginTest"/>
         </classes>
     </test>
 </suite>

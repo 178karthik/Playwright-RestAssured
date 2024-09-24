@@ -2,10 +2,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="API Automation Tests">
     <suite-files>
-        <suite-file path="/runner/api/citiustech-suite.xml" />
-        <suite-file path="/runner/api/brillio-suite.xml" />
-        <suite-file path="/runner/api/virtusa-suite.xml" />
-        <suite-file path="/runner/api/persistent-suite.xml" />
-        <suite-file path="/runner/api/birlasoft-suite.xml" />
+        <suite-file path="/runner/api/vendor-portal.xml" />
     </suite-files>
 </suite>

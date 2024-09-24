@@ -697,17 +697,7 @@ public class SMSConfigService {
         List<Map<String, JsonPath>> list = response.getBody().jsonPath().getList("searchData");
         return list;
     }
-    public  Map<String, JsonPath> getDesignations(ITestContext iTestContext,String designationName) {
-        RestRequestDefinition saveIntegrationsDef = PayloadBuilder.mapJsonToRestDefinition("sms/designationMaster/search-designation-master.json");
-        Map<String, Object> replaceKeys = new HashMap<>();
-        replaceKeys.put("clientId", getClientId(userContext));
-        replaceKeys.put("name", designationName);
-        PayloadBuilder.getResolvedDefinition(saveIntegrationsDef, replaceKeys);
-        Response response = APIExecutor.execute(userContext, saveIntegrationsDef, iTestContext);
-        Assert.assertEquals(response.getStatusCode(), 200);
-        List<Map<String, JsonPath>> list = response.getBody().jsonPath().getList("searchData");
-        return list.get(0);
-    }
+
 
     public UserContext getUserContext() {
         return userContext;

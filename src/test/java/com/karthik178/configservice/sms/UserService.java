@@ -233,7 +233,7 @@ public class UserService {
 
     public Response createDesignation(SMSConfigService smsConfigService, UserContext userContext, ITestContext iTestContext, Map<String, Object> designationMasterFields) {
         RestRequestDefinition createUserDefinition = PayloadBuilder
-                .mapJsonToRestDefinition("sms/integrations/inbound/designationMaster/create-designation-in-designation-master.post.json");
+                .mapJsonToRestDefinition("sms/integrations/inbound/jsonPayloads/create-designation-in-designation-master.post.json");
 
         String apiKey = smsConfigService.getAPIKey();
         String randomNumberString = Faker.instance().idNumber().valid().toString();
