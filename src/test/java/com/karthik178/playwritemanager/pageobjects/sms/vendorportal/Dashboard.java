@@ -38,7 +38,7 @@ public class Dashboard extends BasePlaywriteTest {
         this.page = page;
         this.browserutils = new Browserutils();
         this.searchBar = page.locator("input[type='search']");
-        this.searchResultsCount = page.locator("dataTable_info");
+        this.searchResultsCount = page.locator(".dataTables_info");
     }
 
     @Step("Verify Search Orders is Working")
