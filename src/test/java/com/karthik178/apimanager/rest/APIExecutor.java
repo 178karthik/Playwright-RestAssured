@@ -75,13 +75,13 @@ public class APIExecutor {
         if (definition.getParameters() != null) {
             specification = specification.queryParams(definition.getParameters());
         }
-        if (definition.getCookie() != null) {
-            Cookie myCookie = new Cookie.Builder("x-prism-token", definition.getCookie().get("x-prism-token"))
-                    .setSecured(true)
-                    .setComment("session id cookie")
-                    .build();
-            specification = specification.cookie(myCookie);
-        }
+//        if (definition.getCookie() != null) {
+//            Cookie myCookie = new Cookie.Builder("x-prism-token", definition.getCookie().get("x-prism-token"))
+//                    .setSecured(true)
+//                    .setComment("session id cookie")
+//                    .build();
+//            specification = specification.cookie(myCookie);
+//        }
         if (definition.getBody() != null) {
             specification = specification.body(definition.getBody());
         }
@@ -233,10 +233,10 @@ public class APIExecutor {
         if (definition.getParameters() != null) {
             specification = specification.queryParams(definition.getParameters());
         }
-//        Cookie myCookie = new Cookie.Builder("x-prism-token", context.getUser().getToken())
-//                .setSecured(true)
-//                .setComment("session id cookie")
-//                .build();
+        Cookie myCookie = new Cookie.Builder("x-prism-token", context.getUser().getToken())
+                .setSecured(true)
+                .setComment("session id cookie")
+                .build();
         specification = specification.cookies(context.getAuthCookies());
         if (definition.getBody() != null) {
             specification = specification.body(definition.getBody());
@@ -286,9 +286,9 @@ public class APIExecutor {
 //            Assert.assertTrue(response.getStatusCode() < 300,response.body().prettyPrint());
 //        }
 //        LogHandler.logInfo(log);
-        if (Objects.nonNull( System.getProperty("treatmentType"))) {
-            saveResponse(definition, response, System.getProperty("treatmentType"));
-        }
+//        if (Objects.nonNull( System.getProperty("treatmentType"))) {
+//            saveResponse(definition, response, System.getProperty("treatmentType"));
+//        }
         return response;
 
     }

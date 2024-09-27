@@ -48,8 +48,8 @@ public abstract class BaseRestTest {
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        smsConfigService = SessionManager.getSession(key);
-        userContext = smsConfigService.getUserContext();
+//        smsConfigService = SessionManager.getSession(key);
+//        userContext = smsConfigService.getUserContext();
         env = System.getProperty("env");
         secret = ConfigHelper.getSecret(key);
         userName = secret.getEmail();

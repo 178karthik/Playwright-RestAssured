@@ -1,0 +1,11 @@
+{
+  "description": "Pet Store :: Add a new Pet to PetStore",
+  "uriPath": "/pet/findByStatus?status=available",
+  "headers": {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  "body": {
+},
+  "method": "GET"
+}
