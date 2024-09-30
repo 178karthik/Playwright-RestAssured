@@ -1,11 +1,27 @@
 {
   "description": "Pet Store :: Add a new Pet to PetStore",
-  "uriPath": "/pet/findByStatus?status=available",
+  "uriPath": "/pet",
   "headers": {
     "Accept": "application/json",
     "Content-Type": "application/json"
   },
   "body": {
+    "id": 0,
+    "category": {
+      "id": 0,
+      "name": "{categoryName}"
+    },
+    "name": "{name}",
+    "photoUrls": [
+      "{url}"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "{tagName}"
+      }
+    ],
+    "status": "available"
 },
-  "method": "GET"
+  "method": "POST"
 }

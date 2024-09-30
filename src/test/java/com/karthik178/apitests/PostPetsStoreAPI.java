@@ -22,27 +22,36 @@ import java.util.Map;
 
 @Epic("Pet Store")
 @Features({@Feature("Login")})
-@Story("Gets Pets From Pet Store")
-public class GetPetsFromPetsStoreAPI extends BaseRestTest {
+@Story("Post Pets From Pet Store")
+public class PostPetsStoreAPI extends BaseRestTest {
 
     private static String userKey = "pet.admin";
-    public GetPetsFromPetsStoreAPI() {
+    public PostPetsStoreAPI() {
         super(userKey);
 
     }
 
-   @Test(description = "Gets Pets From Pet Store")
-    public void getPetsFromPetsStoreAPI(ITestContext iTestContext)
+   @Test(description = "Post Pets From Pet Store")
+    public void postPetsFromPetsStoreAPI(ITestContext iTestContext)
    {
        Secret secret = ConfigHelper.getSecret(userKey);
-       RestRequestDefinition getPetsDefinition = PayloadBuilder.mapJsonToRestDefinition("jsonPayloads/pet-store-get.json");
+       RestRequestDefinition getPetsDefinition = PayloadBuilder.mapJsonToRestDefinition("jsonPayloads/pet-store-post.json");
        Map<String, Object> replaceKeys = new HashMap<>();
+       replaceKeys.put("categoryName","Dog");
+       replaceKeys.put("url","https://karthiksdet.hashnode.dev/");
+       replaceKeys.put("tagName","German Shepard");
+       replaceKeys.put("name","Ruby");
        PayloadBuilder.getResolvedDefinition(getPetsDefinition,replaceKeys);
        Response response = APIExecutor.execute(secret.getUrl(), getPetsDefinition);
        Assert.assertTrue(response.statusCode()==200);
-       List<Map<String,Object>> pets  = response.getBody().jsonPath().getList("");
-       int actualPetsFound = pets.size();
-       System.out.println("Total Pets found:"+actualPetsFound);
+       System.out.println(response.getBody().prettyPrint());
+       String dogName = response.getBody().jsonPath().getString("name");
+       String tagName = response.getBody().jsonPath().getString("tags[0].name");
+       /*Assertion */
+       Assert.assertEquals(dogName,"Ruby");
+       Assert.assertEquals(tagName,"German Shepard");
+
+
 
    }
 
